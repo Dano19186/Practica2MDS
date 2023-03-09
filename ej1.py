@@ -1,5 +1,5 @@
 import re
 
 entrada = input()
-r = re.findall("[\w]*\d{4}[\w]*", entrada)
+r = re.findall("\\b\\d{4}\\b", entrada)
 print(*r)
