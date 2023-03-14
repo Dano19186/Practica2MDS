@@ -1,7 +1,6 @@
 import re
 
 entrada = input()
-r = re.findall("E?[\\-\\ ]?[0-9]{4}[-\\ ]?[A-Z]{3}", entrada)
+r = re.findall("E?\\ ?\\-?\\d{4}\\ ?\\-?[A-Z]{3}", entrada)
+print(*r)
 
-for e in r:
-    print(e.strip())
