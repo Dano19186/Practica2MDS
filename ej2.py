@@ -1,6 +1,6 @@
 import re
 
 entrada = input()
-r = re.findall("E?\\ ?\\-?\\d{4}\\ ?\\-?[A-Z]{3}", entrada)
-print(*r)
-
+patron = "(?:E |E-|E)?\d{4}\ ?\-? ?[A-Z]{3}"
+r = re.findall(patron, entrada)
+print(*r, sep="\n")
