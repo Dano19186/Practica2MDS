@@ -1,6 +1,12 @@
 import re
 
 entrada = input()
-patron = "\\b(?:E |E-|E)?\d{4}\ ?\-? ?[A-Z]{3}"
+patron = "\\b\d{4}-\d{2}-\d{2}\\b"
+patron2 = "\d{2,4}"
 r = re.findall(patron, entrada)
-print(*r, sep="\n")
+l = " ".join(map(str, r))
+separados = re.findall(patron2, l)
+separados.reverse()
+lsol = ".".join(map(str, separados))
+sol = re.sub(patron, lsol, entrada)
+print(sol)
