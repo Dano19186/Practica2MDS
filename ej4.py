@@ -1,7 +1,7 @@
 import re
 
 entrada = input()
-patron = "\\b([a-zA-Z]+)\\.([a-zA-Z]+)(\\.([0-9]{4})@alumnos.urjc.es|@urjc.es)\\b"
+patron = "\\b([a-zA-Z]+)\\.([a-zA-Z]{2,})(\\.([0-9]{4})@alumnos.urjc.es|@urjc.es)\\b"
 r = re.findall(patron, entrada)
 i = 0
 while i < len(r):
