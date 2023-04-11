@@ -1,9 +1,14 @@
 import re
 
 entrada = input()
+sol = entrada
 patron = "\\b(\\d{4})-(\\d{2})-(\\d{2})\\b"
 r = re.findall(patron, entrada)
-year, mes, day = r[0][0], r[0][1], r[0][2]
-invertido = day+"."+mes+"."+year
-sol = re.sub(patron, invertido, entrada)
+for i in range(len(r)):
+    year, mes, day = r[i][0], r[i][1], r[i][2]
+    origin = year+"-"+mes+"-"+day
+    invertido = day+"."+mes+"."+year
+
+    sol = re.sub(origin, invertido, sol)
+
 print(sol)
