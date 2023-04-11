@@ -1,5 +1,13 @@
 import re
 
+
+def print_csv(csv_file):
+    with open(csv_file, 'r') as file:
+        csv_reader = csv.reader(file)
+        for row in csv_reader:
+            print(row)
+
+
 regex = r'^(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}\.\d+)\s+(\S+)\s+(\S+)\s+---\s+\[(\S+)\]\s+(\S+)\s+:\s+(.*)$'
 
 csv = 'logs.csv'
@@ -22,3 +30,4 @@ with open(csv, 'w') as csv_file:
 
             csv_file.write(f'"{nivelLog}","{hilo}","{claseResponsable}","{mensaje}"\n')
 
+print_csv('logs.csv')
