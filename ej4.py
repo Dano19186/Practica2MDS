@@ -6,7 +6,7 @@ r = re.findall(patron, entrada)
 i = 0
 while i < len(r):
     if r[i][2] == "@urjc.es":
-        print("profesor "+r[i][0]+" apellido "+r[i][1]+"\n")
+        print("profesor "+r[i][0]+" apellido "+r[i][1])
     else:
-        print("alumno "+r[i][1]+" matriculado en "+r[i][3]+"\n")
+        print("alumno "+r[i][1]+" matriculado en "+r[i][3])
     i += 1
