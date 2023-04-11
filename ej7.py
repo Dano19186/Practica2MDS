@@ -1,6 +1,7 @@
 import re
 
 entrada = input()
-r = re.findall("\\b\\d{4}\\b", entrada)
-
+patron = r".*  ([A-Z]+).* --- \[(.*)\] .*\.([A-Z]\w+) *: (.*)"
+r = re.findall(patron, entrada)
+print(r[0], sep=",")
 
