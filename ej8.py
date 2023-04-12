@@ -11,7 +11,7 @@ if match:
     claseResponsable = match.group(3)
     mensaje = match.group(4)
 
-    line = '"'+nivelLog+'"'+',"'+hilo+'"'+',"'+claseResponsable+'",'+mensaje+'"'
+    line = '"'+nivelLog+'","'+hilo+'","'+claseResponsable+'","'+mensaje+'"'
     print(line)
 
 else:
