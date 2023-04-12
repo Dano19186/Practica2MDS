@@ -1,7 +1,7 @@
 import re
 
 entrada = input()
-patron = r".* +([A-Z]+).* --- \[(.*)\] ([A-Z]\w+|.*\.([A-Z]\w+)) *: (.*)"
+patron = r".* +([A-Z]+).* --- \[(.*)\]\s+[a-z.]*([A-Z]\S+) *: (.*)"
 r = re.findall(patron, entrada)
 for i in range(len(r)):
     j = 0
