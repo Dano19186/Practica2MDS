@@ -27,4 +27,4 @@ file.close()
 with open(csv_file, 'r') as file:
     reader = csv.reader(file)
     for row in reader:
-        print('"'+row[0]+'",''"'+row[1]+'",''"'+row[2]+'",''"'+row[3]+'"')
+        print('"'+row[0]+'",''"'+row[1]+'",''"'+row[2]+'",''"'+row[3].replace(',',' ')+'"')
