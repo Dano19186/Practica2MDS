@@ -1,6 +1,7 @@
 import re
 
 entrada = input()
-r = re.findall("\\b\\d{4}\\b", entrada)
+patron = r"\b\d{4}\b"
+r = re.findall(patron, entrada)
 for year in r:
     print(year)
